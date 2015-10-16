@@ -5,10 +5,10 @@
 subscribers to exchange messages.  With the `org.civicrm.sympasync` extension,
 you can manage subscribers in CiviCRM while using Sympa's mailing list.
 
-Sympa supports [dynamic mailing
+**How It Works**: Sympa supports [dynamic mailing
 lists](http://www.sympa.org/manual/managing-members) using a SQL database.
 This extension provides instructions and helpers for configuring a dynamic
 mailing-list based on CiviCRM's SQL database.
 
-To get started, install the extension in CiviCRM and navigate to
+**Get Started**: Install the extension in CiviCRM and navigate to
 "Administer: Communications: Sympa Sync".
