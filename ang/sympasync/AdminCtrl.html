@@ -54,12 +54,24 @@
       <p><em>({{ts('Note: If Sympa and CiviCRM are on different servers, then you may need to adjust the host and port.')}})</em></p>
     </div>
 
-    <div class="crm-sympasync-admin-box" crm-ui-accordion="{title: ts('Setup: Unsubscribe URL')}" ng-show="selected.groupId">
-      <p>{{ts('In the Sympa settings for your mailing list, navigate to "Edit Templates" and open the message footer.')}}</p>
+    <div class="crm-sympasync-admin-box" crm-ui-accordion="{title: ts('Setup: Subscriber management')}" ng-show="selected.groupId">
+      <p>{{ts('To keep the subscriber lists synchronized in CiviCRM and Sympa, it helps to consistently manage subscribers through CiviCRM. This requires additional configuration in Sympa.')}}</p>
 
-      <p>{{ts('Edit the unsubscribe instructions to direct users to this URL:')}}</p>
+      <p>{{ts('You may restrict access to Sympa\'s built-in "Subscribe" and "Unsubscribe" features by navigating to "Change Settings: Permissions". Review permissions for "subscribe", "add", "unsubscribe", and "del".')}}</p>
 
-      <pre>{{unsubscribeBaseUrl}}?gid={{selected.groupId}}&email=[% user.email | uri %]</pre>
+      <p>{{ts('By default, all messages sent through Sympa include unsubscribe instructions in the footer. You may change these instructions to reference CiviCRM.')}}</p>
+
+      <p>{{ts('Navigate to "Edit Templates" and open the message footer. Replace the Sympa unsubscribe address with one of these URLs:')}}</p>
+
+      <pre>
+      {{unsubscribeBaseUrl}}?gid={{selected.groupId}}
+
+      or
+
+      {{unsubscribeBaseUrl}}?gid={{selected.groupId}}&email=[% user.email | uri %]
+      </pre>
+
+
     </div>
 
   </form>

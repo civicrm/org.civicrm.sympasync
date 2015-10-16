@@ -22,22 +22,8 @@ class CRM_Sympasync_Upgrader extends CRM_Sympasync_Upgrader_Base {
       WHERE gc.status = 'Added' AND e.is_primary = 1 AND e.on_hold = 0;
     ");
 
-    //foreach (array('localhost', '%') as $host) {
-    //  $queryParams = array(
-    //    1 => array($db['db_user'], 'String'),
-    //    2 => array($host, 'String'),
-    //    3 => array($db['db_pass'], 'String'),
-    //  );
-    //
-    //  $count = CRM_Core_DAO::singleValueQuery('SELECT count(*) FROM mysql.user WHERE Host = %1 and User = %2', $queryParams);
-    //  var_dump(array('count' => $count));
-    //  if ($count > 0) {
-    //    $this->executeSql('DROP USER %1@%2', $queryParams);
-    //  }
-    //
-    //  $this->executeSql("CREATE USER %1@%2 IDENTIFIED BY %3", $queryParams);
-    //  $this->executeSql("GRANT USAGE, SELECT ON {$db['db_name']}.$viewName TO %1@%2", $queryParams);
-    //}
+    $privateToken = CRM_Utils_String::createRandom(32, CRM_Utils_String::ALPHANUMERIC);
+    CRM_Core_BAO_Setting::setItem($privateToken, 'Sympa', 'sympaPrivateToken');
   }
 
   /**

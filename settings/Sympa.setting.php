@@ -75,4 +75,23 @@ return array(
     'description' => 'The credentials used by Sympa to get subscribers from the CiviCRM DB',
     'help_text' => NULL,
   ),
+  'sympaPrivateToken' => array(
+    'group_name' => 'Sympa',
+    'group' => 'sympa',
+    'name' => 'sympaPrivateToken',
+    'type' => 'String',
+    'quick_form_type' => 'Element',
+    'html_attributes' => array(
+      'size' => 33,
+      'maxlength' => 64,
+    ),
+    'html_type' => 'Text',
+    'default' => NULL,
+    'add' => '4.3',
+    'title' => 'Sympa Private Token',
+    'is_domain' => 1,
+    'is_contact' => 0,
+    'description' => 'This token is used to sign messages sent by CiviCRM-Sympa.',
+    'help_text' => NULL,
+  ),
 );

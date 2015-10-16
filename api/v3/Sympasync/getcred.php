@@ -21,6 +21,8 @@ function _civicrm_api3_sympasync_getcred_spec(&$spec) {
  * @throws API_Exception
  */
 function civicrm_api3_sympasync_getcred($params) {
+  // Note: By default, API's require "administer CiviCRM" permission.
+
   $dsn = CRM_Core_Config::singleton()->dsn;
 
   $result = array(

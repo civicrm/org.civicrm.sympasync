@@ -269,7 +269,7 @@ function _sympasync_civix_insert_navigation_menu(&$menu, $path, $item) {
         'active'     => 1,
       ), $item),
     );
-    return true;
+    return TRUE;
   }
   else {
     // Find an recurse into the next level down
