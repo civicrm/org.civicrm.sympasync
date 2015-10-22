@@ -8,7 +8,15 @@ you can manage subscribers in CiviCRM while using Sympa's mailing list.
 **How It Works**: Sympa supports [dynamic mailing
 lists](http://www.sympa.org/manual/managing-members) using a SQL database.
 This extension provides instructions and helpers for configuring a dynamic
-mailing-list based on CiviCRM's SQL database.
+mailing-list based on CiviCRM's SQL database. 
 
 **Get Started**: Install the extension in CiviCRM and navigate to
 "Administer: Communications: Sympa Sync".
+
+**Security**: The Sympa application will be able to read a list of
+active, primary email addresses for each group in CiviCRM, but it will
+not be able to modify data or access other SQL tables.
+
+**Limitations**: Currently, this only supports simple, static groups.
+If the concept works well with static groups, we can extend to smart,
+dynamic groups.
