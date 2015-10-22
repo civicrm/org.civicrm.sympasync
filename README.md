@@ -13,9 +13,10 @@ mailing-list based on CiviCRM's SQL database.
 **Get Started**: Install the extension in CiviCRM and navigate to
 "Administer: Communications: Sympa Sync".
 
-**Security**: The Sympa application will be able to read a list of
-active, primary email addresses for each group in CiviCRM, but it will
-not be able to modify data or access other SQL tables.
+**Security**: The Sympa application has a restricted view of the CiviCRM
+database. It can read a list of active, primary email addresses for each
+group in CiviCRM, but it cannot directly modify data or access other SQL
+tables.
 
 **Limitations**: Currently, this only supports simple, static groups.
 If the concept works well with static groups, we can extend to smart,
