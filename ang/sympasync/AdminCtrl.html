@@ -26,10 +26,10 @@
       <!-- Note: Usernames and passwords are alphanumeric. $/ -->
       <pre>
       CREATE USER '{{sqlCred.db_user}}'@'localhost' IDENTIFIED BY '{{sqlCred.db_pass}}';
-      GRANT USAGE, SELECT ON {{sqlCred.db_name}}.{{sqlView}} TO '{{sqlCred.db_user}}'@'localhost'";
+      GRANT USAGE, SELECT ON {{sqlCred.db_name}}.{{sqlView}} TO '{{sqlCred.db_user}}'@'localhost';
 
       CREATE USER '{{sqlCred.db_user}}'@'%' IDENTIFIED BY '{{sqlCred.db_pass}}';
-      GRANT USAGE, SELECT ON {{sqlCred.db_name}}.{{sqlView}} TO '{{sqlCred.db_user}}'@'%'";
+      GRANT USAGE, SELECT ON {{sqlCred.db_name}}.{{sqlView}} TO '{{sqlCred.db_user}}'@'%';
       </pre>
     </div>
 
