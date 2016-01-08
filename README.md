@@ -18,6 +18,8 @@ database. It can read a list of active, primary email addresses for each
 group in CiviCRM, but it cannot directly modify data or access other SQL
 tables.
 
-**Limitations**: Currently, this only supports simple, static groups.
-If the concept works well with static groups, we can extend to smart,
-dynamic groups.
+**Limitations**: 
+  * Currently, this only supports simple, static groups. If the concept works
+    well with static groups, we can extend to smart, dynamic groups.
+  * Users with `administer CiviCRM` will have access to see group memberships.
+    This is typical but may be ill-advised in certain multidomain/ACL configurations.
