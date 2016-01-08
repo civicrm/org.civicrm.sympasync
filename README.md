@@ -21,5 +21,5 @@ tables.
 **Limitations**: 
   * Currently, this only supports simple, static groups. If the concept works
     well with static groups, we can extend to smart, dynamic groups.
-  * Users with `administer CiviCRM` will have access to see group memberships.
+  * Users with `administer CiviCRM` will have (indirect) means to see group memberships.
     This is typical but may be ill-advised in certain multidomain/ACL configurations.
